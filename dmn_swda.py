@@ -124,7 +124,7 @@ class DMNModel():
             self.encoder_inputs = tf.cond(self.is_training, lambda : self.inputs + noise, lambda : self.inputs)
         
         with tf.variable_scope('input_fusion'):
-            yh
+            
             self.setup_encoder() 
             facts = self.encoder_output # [N, t, D]
             print(facts, "********************************")
